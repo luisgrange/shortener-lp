@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
+
+$Cyan: hsl(180, 66%, 49%);
+$Dark-Violet: hsl(257, 27%, 26%);
+$Red: hsl(0, 87%, 67%);
+$Gray: hsl(0, 0%, 75%);
+$Grayish-Violet: hsl(257, 7%, 63%);
+$Very-Dark-Blue: hsl(255, 11%, 22%);
+$Very-Dark-Violet: hsl(260, 8%, 14%);
+
+@mixin button(){
+    background-color: $Cyan;
+    padding: .5rem;
+    width: 40%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: #ffff;
+    font: normal normal 500 16px/25px Poppins;
+}
+header{
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+header{
+    nav{
+        list-style: none;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    nav li{
+        padding-left: 10px;
+    }
+    nav li a{
+        text-decoration: none;
+        color: $Grayish-Violet;
+        font: normal normal 500 16px/25px Poppins;
+    }
+
+    .btn{
+        @include button();
+    }
+    .btn.login{
+        background-color: transparent;
+        color: $Grayish-Violet;
+
+    }
+}
+main{
+    margin-top: 3rem;
+}
+main{
+    #intro{
+        position: relative;
+    }
+    #intro{
+        .row{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .content h1{
+            font: normal normal 700 50px/55px Poppins;
+            color: $Very-Dark-Violet;
+        }
+
+        .content p{
+            font: normal normal 400 20px/35px Poppins;
+            color: $Grayish-Violet;
+        }
+
+        .content button{
+            @include button();
+        }
+        .image img{
+            max-width: 90%;
+        }
+    }
+
+    #shortening{
+        background: hsla(0, 0%, 75%, .2);
+        padding: 2rem 0;
+        margin-top: 7rem;
+        position: relative;
+    }
+
+    #shortening{
+        .form-url{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('./images/bg-shorten-desktop.svg') $Dark-Violet no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding: 2rem;
+            border-radius: 10px;
+            position: absolute;
+            width: 83%;
+            top: -60px
+        }
+
+        .form-url input{
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            width: 78%;
+            padding:.5rem;
+            color: $Grayish-Violet;
+            font: normal normal 300 16x/25px Poppins;
+        }
+
+        .form-url button{
+            @include button();
+            width: 12%;
+            border-radius: 5px;
+            margin-left: 10px;;
+        }
+        .row:nth-child(2){
+            margin-top: 1rem;
+        }
+        .text h2{
+            font: normal normal 700 50px/55px Poppins;
+            color: $Very-Dark-Violet;
+        }
+
+        .text p{
+            font: normal normal 400 20px/35px Poppins;
+            color: $Grayish-Violet;
+            padding: 0 17rem
+        }
+
+        .card-body{
+            background-color: #fff;
+            position: relative;
+        }
+        .card-body h4{
+            font: normal normal 700 20px/35px Poppins;
+            color: $Very-Dark-Violet;
+            margin-top: 3rem;
+        }
+        .card-body p{
+            font: normal normal 400 15px/25px Poppins;
+            color: $Grayish-Violet;
+            padding: 0 1rem 0 0;
+
+        }
+        .col-lg-4:nth-child(2) .card-body{
+            margin-top: 3rem;
+        }
+        .col-lg-4:nth-child(3) .card-body{
+            margin-top: 5rem;
+        }
+
+        .col-lg-4:not(.col-lg-4:nth-child(3)) .card-body::after{
+            content: '';
+            background-color: $Cyan;
+            position: absolute;
+            width: 24px;
+            height: 10px;
+            bottom: 120px;
+            right: -24px;
+        }
+        .card-image{
+            position: relative;
+            background-color: $Dark-Violet;
+            position: absolute;
+            padding: .7rem;
+            border-radius: 100%;
+            top: -30px;
+            left: 30px;
+        }
+
+        
+        .card-image:nth-child(3) img{
+            width: 40px;
+            height: 40px;
+        }
+        .shortened{
+            margin-top: 2rem;
+        }
+        .shortened ul{
+            padding: 0;
+            list-style: none;
+        }
+        .shortened .link{
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        .shortened .link li{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .shortened .link li a{
+            font: normal normal 700 16px/25px Poppins;
+            color: $Very-Dark-Violet;
+            text-decoration: none;
+            width: 20%;
+        }
+        .shortened .link li .aux{
+            width: 27%
+        }
+        .shortened .link li .aux a{
+            font: normal normal 700 16px/25px Poppins;
+            color: $Cyan;
+            width: 20%;
+
+        }
+        .shortened .link li .aux button{
+            @include button();
+            width: 25%;
+        }
+    }
+
+    #final{
+        
+        background: url('./images/bg-shorten-desktop.svg') $Dark-Violet no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 3rem 0;
+    }
+
+    #final{
+        .get-started, .row{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .get-started h2{
+            font: normal normal 700 40px/50px Poppins;
+            color: #fff;
+        }
+        .get-started .btn{
+            @include button();
+            margin-top: 1rem;
+            width: 20%;
+            padding: .7rem;
+        }
+    }
+}
+footer{
+    background-color: $Very-Dark-Violet;
+    padding: 2rem 0;
+}
+
+footer{
+    .row{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    img{
+        filter: brightness(0) invert(100%);
+    }
+
+    .col-lg-2 p{
+        font: normal normal 400 20px/20px Poppins;
+        color: #fff;
+    }
+    .col-lg-2 ul{
+        list-style: none;
+        padding: 0;
+    }
+
+    .col-lg-2 ul li a{
+        font: normal normal 400 16px/20px Poppins;
+        color: #fff;
+        opacity: .8;
+        text-decoration: none;
+    }
+
+    .social{
+        display: inline-flex;
+    }
+
+    .social li{
+        padding-right: 10px;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
