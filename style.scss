@@ -99,7 +99,7 @@ main{
             border-radius: 10px;
             position: absolute;
             width: 83%;
-            top: -60px
+            top: -65px
         }
 
         .form-url input{
@@ -109,9 +109,22 @@ main{
             width: 78%;
             padding:.5rem;
             color: $Grayish-Violet;
-            font: normal normal 300 16x/25px Poppins;
+            font: normal normal 300 16px/25px Poppins;
+            position: relative;
         }
 
+        .form-url input.error{
+            border: 1px solid $Red;
+        }
+        .form-url .error-msg{
+            color: $Red;
+            font: normal normal 400 16px/20px Poppins;
+            padding: 1rem 0;
+            display: none;
+            position: absolute;
+            bottom: -23px;
+            left: 82px;
+        }
         .form-url button{
             @include button();
             width: 12%;

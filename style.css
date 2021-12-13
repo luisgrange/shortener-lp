@@ -84,7 +84,7 @@ main #shortening .form-url {
   border-radius: 10px;
   position: absolute;
   width: 83%;
-  top: -60px;
+  top: -65px;
 }
 main #shortening .form-url input {
   border-radius: 5px;
@@ -93,7 +93,20 @@ main #shortening .form-url input {
   width: 78%;
   padding: 0.5rem;
   color: #9e9aa7;
-  font: normal normal 300 16x/25px Poppins;
+  font: normal normal 300 16px/25px Poppins;
+  position: relative;
+}
+main #shortening .form-url input.error {
+  border: 1px solid #f46262;
+}
+main #shortening .form-url .error-msg {
+  color: #f46262;
+  font: normal normal 400 16px/20px Poppins;
+  padding: 1rem 0;
+  display: none;
+  position: absolute;
+  bottom: -23px;
+  left: 82px;
 }
 main #shortening .form-url button {
   background-color: #2acfcf;
